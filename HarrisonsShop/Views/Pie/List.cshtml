@@ -1,14 +1,25 @@
 ﻿@*@model IEnumerable<HarrisonsShop.Models.Pie> //Razor syntax, access properties on model that will be passed(the instance)*@
-@model HarrisonsShop.ViewModels.PieListViewModel
-
-
+@model PieListViewModel //declared in viewImports file
 
 <h1>@Model.CurrentCategory</h1>
 @foreach(var pie in Model.Pies)
 {
- <div>
-            <h2>@pie.Name</h2>
-            <h2>@pie.Price.ToString("c")</h2>
-            <h4>@pie.Category.CategoryName</h4>
-        </div>
-    }
+    <div class="col">
+                <div class="card pie-card">
+                    <img src="@pie.ImageThumbnailUrl" class="card-img-top" alt="@pie.Name">
+                    <div class="card-body pie-button">
+                        <h4 class="d-grid">
+                        </h4>
+
+                        <div class="d-flex justify-content-between mt-2">
+                            <h2 class="text-start">
+                                <a class="pie-link">@pie.Name</a>
+                            </h2>
+                            <h5 class="text-nowrap">
+                        @pie.Price.ToString("c")
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+}

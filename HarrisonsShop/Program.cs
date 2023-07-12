@@ -1,5 +1,6 @@
 //ASP.NET Core with built-in web server(Kestrel)
 using HarrisonsShop.Models;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,6 +10,12 @@ builder.Services.AddScoped<ICategoryRepository, MockCategoryRepository>(); //cre
 builder.Services.AddScoped<IPieRepository, MockPieRepository>();
 
 builder.Services.AddControllersWithViews();
+
+//add framework services using extention method
+builder.Services.AddDbContext<HarrisonsShopDbContext>(options =>
+{
+    options.UseSqlServer(builder.Configuration["ConnectionStrings:HarrisonsShopDbContextConnection"]);
+});
 
 var app = builder.Build();
 

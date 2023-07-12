@@ -5,11 +5,11 @@
     {
         private readonly HarrisonsShopDbContext _harrisonsPieShopDbContext;
 
-        public CategoryRepository(HarrisonsShopDbContext harrisonsPieShopDbContext)
+        public CategoryRepository(HarrionsShopDbContext harrisonsPieShopDbContext)
         {
             _harrisonsPieShopDbContext = harrisonsPieShopDbContext;
         }
 
-        public IEnumerable<Category> AllCategories => _harrisonsPieShopDbContext.Categories.OrderBy(p => p.CategoryName); //using injetion to get all the categories ordered by category name alphabetically
+        public IEnumerable<Category> AllCategories => _harrisonsPieShopDbContext.Categories.OrderBy(p => p.CategoryName);
     }
 }

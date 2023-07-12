@@ -27,6 +27,8 @@ namespace HarrisonsShop.Models
             }
         }
 
+        public HarrisonsShopDbContext? harrisonsShopDbContext { get; }
+
         public Pie? GetPieById(int pieId)
         {
             return _harrisonsShopDbContext.Pies.FirstOrDefault(p => p.PieId == pieId); //first or default on the Pies DbSet here to get the pie where the ID is equual to the PieID thats passed here

@@ -4,12 +4,12 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddControllersWithViews();
-
 //builder.Services.AddTransient //adds a new instance everytime
 //builder.Services.AddSingleton //creates one singleton
-builder.Services.AddScoped<ICategoryRepository, CategoryRepository>(); 
-builder.Services.AddScoped<IPieRepository, PieRepository>();
+builder.Services.AddScoped<ICategoryRepository, MockCategoryRepository>(); //create a sington while a request is being handled, most used
+builder.Services.AddScoped<IPieRepository, MockPieRepository>();
+
+builder.Services.AddControllersWithViews();
 
 //add framework services using extension method
 builder.Services.AddDbContext<HarrisonsShopDbContext>(options =>

@@ -11,5 +11,10 @@ namespace HarrisonsShop.Models
 
         public DbSet<Category> Categories { get; set; } //set to EF core entities to match
         public DbSet<Pie> Pies { get; set; } //set to EF core entities to match
+
+        public static implicit operator HarrisonsShopDbContext(HarrionsShopDbContext v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -26,3 +26,5 @@ C:\code\asp.net6\HarrisonsShop\HarrisonsShop\obj\Debug\net6.0\HarrisonsShop.genr
 C:\code\asp.net6\HarrisonsShop\HarrisonsShop\obj\Debug\net6.0\ref\HarrisonsShop.dll
 C:\code\asp.net6\HarrisonsShop\HarrisonsShop\obj\Debug\net6.0\HarrisonsShop.RazorAssemblyInfo.cache
 C:\code\asp.net6\HarrisonsShop\HarrisonsShop\obj\Debug\net6.0\HarrisonsShop.RazorAssemblyInfo.cs
+C:\code\asp.net6\HarrisonsShop\HarrisonsShop\bin\Debug\net6.0\libman.json
+C:\code\asp.net6\HarrisonsShop\HarrisonsShop\bin\Debug\net6.0\HarrisonsShop.staticwebassets.runtime.json

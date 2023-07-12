@@ -11,7 +11,7 @@ builder.Services.AddScoped<IPieRepository, MockPieRepository>();
 
 builder.Services.AddControllersWithViews();
 
-//add framework services using extention method
+//add framework services using extension method
 builder.Services.AddDbContext<HarrisonsShopDbContext>(options =>
 {
     options.UseSqlServer(builder.Configuration["ConnectionStrings:HarrisonsShopDbContextConnection"]);
